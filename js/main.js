@@ -13,10 +13,12 @@ window.onload =()=>{
     const fondo= document.body;
     const parrafo= document.getElementsByTagName('p');
     const destacado= document.getElementById('destacado');
+    const subtitulos= document.getElementsByTagName('h2')
     
 cambiarFondo(fondo);
 cambiarColor(parrafo);
 cambiarFuente(destacado);
+cambiarTipografia(subtitulos);
 crearEnlace();
 //Plus
 
@@ -32,7 +34,11 @@ const cambiarColor=(element)=>{
     }
 }
 
-const cambiarFuente=(element)=>{
+const cambiarFuente =(element)=>{
+  element.style.fontSize="24px";
+}
+
+const cambiarTipografia=(element)=>{
     for(let i=0; i<element.length; i++){
         element[i].style.fontFamily="Arial"
     }
